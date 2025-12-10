@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/projects-styles.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Style+Script&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.x.x/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="images/png" href="img/icons/gab-icon.png">
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <title>Hybrid ASR Correction</title>
+</head>
+<body>
+    <div class="transition">
+        <div class="transition-row row-1">
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+        </div>
+        <div class="transition-row row-2">
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+            <div class="block"></div>
+        </div>
+    </div>
+    <div class="nav-line">
+        <nav class="navbar fixed-top navbar-expand-lg">
+        <a class="navbar-brand" href="#home"><img src="img/icons/gab-icon.png" alt="" class="gab-icon">Gab</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html#home"><span class="hash">#</span>home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="index.html#projects"><span class="hash">#</span>projects</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="index.html#skills"><span class="hash">#</span>skills</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="index.html#about-me"><span class="hash">#</span>about-me</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="index.html#awards"><span class="hash">#</span>awards</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="index.html#contacts"><span class="hash">#</span>contacts</a>
+            </li>
+            </ul>
+        </div>
+    </nav>
+    </div>
+
+    <section class="project-page" id="project-page">
+        <div id="actionMenu" class="action-menu">
+            <button class="menu-toggle" onClick="toggleMenu()">
+                <i class="fa-solid fa-folder icon-closed"></i>
+                <i class="fa-solid fa-folder-open icon-open"></i>
+            </button>
+
+            <ul class="menu-items">
+                <li>
+                <a href="asr-project.html" data-tooltip="ASR Correction">
+                    <img src="img/icons/project-icon-1.png" alt="Project 1">
+                </a>
+            </li>
+            <li>
+                <a href="cyclistic-project.html" data-tooltip="Cyclistic Data">
+                    <img src="img/icons/project-icon-2.png" alt="Project 2">
+                </a>
+            </li>
+            <li>
+                <a href="smartfit-project.html" data-tooltip="SmartFit">
+                    <img src="img/icons/project-icon-3.png" alt="Project 3">
+                </a>
+            </li>
+            <li>
+                <a href="wordwarrior-project.html" data-tooltip="Word Warrior">
+                    <img src="img/icons/project-icon-4.png" alt="Project 4">
+                </a>
+            </li>
+            <li>
+                <a href="techhire-project.html" data-tooltip="Techhire">
+                    <img src="img/icons/project-icon-5.png" alt="Project 5">
+                </a>
+            </li>
+            <li>
+                <a href="stock-project.html" data-tooltip="STOCK">
+                    <img src="img/icons/project-icon-6.png" alt="Project 6">
+                </a>
+            </li>
+            </ul>
+            
+        </div>
+
+        <div class="project-container">
+            <div class="project-page-left">
+                <h2><span>&lt;h2&gt;</span>ASR-induced Ambiguity Correction<span>&lt;/h2&gt;</span></h2>
+                <div class="badge-container terminal-zone">
+                    <span class="badge-tag">Whisper</span>
+                    <span class="badge-tag">mT5</span>
+                    <span class="badge-tag">MER</span>
+                    <span class="badge-tag">M² F-Score</span>
+                </div>
+
+                <p class="project-desc">
+                    A hybrid post-processing pipeline designed to correct ASR-induced lexical ambiguities in Filipino-English (Taglish)
+                    code-switched speech. Utilizes rule-based error simulation to train a <strong>mT5 model</strong> to fix
+                    ASR errors without retraining the core system.
+                </p>
+
+                <div class="results-grid">
+                    <div class="stat-item">
+                        <div class="stat-val">3.56%</div>
+                        <div class="stat-label">Mixed Error Rate</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-val">89.86</div>
+                        <div class="stat-label">M² F-Score</div>
+                    </div>
+                </div>
+
+                <div class="asr-visualization">
+                    <canvas id="audio-canvas"></canvas>
+                        <div class="transcription-box">
+                            <span id="typewriter-text"></span><span class="cursor"></span>
+                        </div>
+                    <div style="font-size: 0.7rem; color: #5c6370; margin-top: 10px; display: flex; justify-content: space-between;">
+                        <span><i class="fa-solid fa-circle-play" style="color: #C778DD"></i>Live Simulation</span>
+                        <span>ASR Correction</span>
+                    </div>    
+                </div>
+
+                <div class="projects-buttons">
+                    <a class="view-btn liquid-btn disabled" data-tooltip="Not available for now ">
+                        Read Manuscript
+                        <span></span>
+                    </a>
+                </div>
+
+                
+            </div>
+            <div class="project-page-right">
+                    <div class="project-img-container">
+
+                        <div class="card-container">
+                            <div class="card-glow"></div>
+                            <div class="tilt-card">
+                                <div class="glare"></div>
+                                <div class="card-content">
+                                    <div class="image-box">
+                                        <div class="card-icon-placeholder">
+                                            <i class="fa-solid fa-layer-group"></i>
+                                            <span>WHISPER + mT5</span>
+                                        </div>
+                                        <div class="image-overlay"></div>
+                                    </div>
+                                    <div class="text-box">
+                                        <h2>Hybrid Pipeline Architecture</h2>
+                                        <p>We employ a Rule-Based Error simulation to generate synthetic "noisy-clean pairs", mimicking common Taglish ASR errors
+                                            (e.g., homophones). These pairs fine-tune the mT5-base transformer.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-container">
+                            <div class="card-glow"></div>
+                            <div class="tilt-card">
+                                <div class="glare"></div>
+                                <div class="card-content">
+                                    <div class="image-box">
+                                        <div class="card-icon-placeholder">
+                                            <i class="fa-solid fa-database"></i>
+                                            <span>50,000 AUGMENTED PAIRS</span>
+                                        </div>
+                                        <div class="image-overlay"></div>
+                                    </div>
+                                    <div class="text-box">
+                                        <h2>Dataset & Performance</h2>
+                                        <p>Trained on a curated corpus of 50,000 sentence pairs derived from YouTube audio. The fine-tuned model achieved a
+                                            Mixed Error Rate(MER) of 3.56, down from a 37.55 baseline.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </section>
+    
+    <script src="js/scripts.js"></script>
+
+    <script src="js/transition.js"></script>
+
+</body>
+</html>
